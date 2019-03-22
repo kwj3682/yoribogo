@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 2px;
+    border: 0;
+}
+.all{
+    margin: auto;
+    width: 60em;
+    min-width: 800px;
+}
+#line{
+    background: #f7943a;
+    height: 20px;
+}
+
+/* 요리 제목, 사진 */
+#top-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 300px;
+    background: white;
+    border : .5px solid lightgrey;
+}
+#top-wrapper > .top-left {
+    display: grid;
+    grid-template-rows: .5fr 2fr;
+}
+/* #top-wrapper > .top-left > div{
+    border: 0.5px solid black;
+} */
+.title{
+    border-bottom: 2px solid #f7943a; 
+    font-weight: bold;
+}
+.title > #titleinput{
+    width :  400px; height: 50px;
+}
+#top-wrapper > .top-right > a > img {
+    position: relative;
+    top:-3px;
+    left: -3px;
+    width: 470px;
+    height: 294px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding : 10px;
+}
+
+/* 요리 정보 */
+#ingrd-wrapper{
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    background: whitesmoke;
+    height: 250px;
+}
+#ingrd-wrapper > .cookinfo{
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    height: 50px; line-height: 50px;
+    border: 0.5px solid black;
+    margin: 10px;
+}
+
+/* 레시피 작성 */
+#content-wrapper{
+    display : grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 1300px;
+    /* max-height: auto; */
+    background: white;
+    border : .5px solid lightgrey;
+}
+
+/* 참고하기 */
+#refer-wrapper{
+    display : grid;
+    grid-template-columns: 2fr 4fr .5fr;
+    height : 60px; line-height: 60px;
+    /* max-height: auto; */
+    background: white; border : .5px solid grey;
+}
+/* #refer-wrapper div{
+    background: white; border : .5px solid black;
+} */
+#refer-wrapper div > #search{
+    width: 500px;
+    height: 30px;
+    border-bottom: 1px solid lightgrey;
+}
+.fas{
+    position: relative;
+    left : 15px;
+    top: 5px;
+    color:  #f7943a;
+}
+
+
+
+/* 등록버튼 */
+#submit{
+    margin: 0 auto;
+}
+#submit > button{
+    background: #f7943a;
+    text-align: center;
+    width: 250px;
+    height: 40px; line-height: 40px;
+    color: white;
+}
+
+/* 하단 */
+/* #footer{
+    background: white;
+    text-align: center;
+    line-height: 100px; 
+    color: #f7943a; font-weight: bold;
+    border: 1px solid #f7943a;
+} */
