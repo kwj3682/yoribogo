@@ -142,7 +142,7 @@ body :-ms-input-placeholder {
 					int diameter = r.nextInt(120)+6;
 					int left = r.nextInt(95)+1;
 					int delay = r.nextInt(40)+1;
-					int duration = r.nextInt(15)+1;%>
+					int duration = r.nextInt(100)+1;%>
                 <li style =" 
                 	box-shadow: 0 0 4px 4px white;
                 	left: <%=left%>%;
