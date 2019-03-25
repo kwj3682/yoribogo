@@ -12,7 +12,14 @@
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
    <title>Document</title>
     <style>
+       body{
+         background: gainsboro;
+       }
         body>div{
+          background: white;
+        position: relative;
+        left :12%;
+        width: 1300px;
           height: 4400px;
           box-sizing: border-box;
         }
@@ -34,28 +41,25 @@
           width : 50px;
           height : 75px;
           bottom : 4%;
-          right: 4%;
+          right: 1%;
           z-index: 1;
         }
         #up>a>i{
           transition:.4s;
-          color: gray;
+          color: tomato;
         }
         #up>a>i:hover{
-          color : black;
+          color : red;
         }
         #main1{
           overflow: hidden;
         }
         #carouselExampleIndicators{
-            width: 100%;
-        }
-        .carousel-item{
-            width: 100%;
+            width: 1300px;
         }
         .carousel-item>img{
           width: 100%;
-          height: 950px;
+          height: 650px;
           transition: 20s;
           animation: scaleLarge 10s linear 0s infinite;
         }
@@ -92,7 +96,7 @@
           position: absolute;
         }
         #menubar{
-          position: sticky;
+          position: fixed;
           z-index: 100;
           top: 0;
           width:100%;
@@ -135,11 +139,21 @@
  
         #main2{
           position: relative;
-          top: 23.4%;
+          top: 15.4%;
           width :100%;
           min-height: 400px;
           font-size: 20px;
-          background: #f1f7ee;
+          text-align: center;
+        }
+        #main2Title{
+          margin : 40px 0 40px 0;
+          font-weight: bold;
+          color: tomato;
+        }
+        #main2>p{
+          font-size: 16px;
+          color: gray;
+          font-weight: lighter;
         }
         .recentPost{
           margin-left: 10%;
@@ -147,6 +161,7 @@
         }
         .recentPost_body{
           width : 100%;
+          margin-top: 40px;
           grid-gap : 0.5em;
           text-align: center;
         }
@@ -156,34 +171,14 @@
           height: 300px;
             background: tomato;
         }
-        #about_us>:nth-child(1){
-          margin-top: 110px;
-
-        }
-        #about_us>h1,h2{
-          margin-top: 10px;
-          font-weight: bold;
-        }
-        #about_us>h5{
-          font-weight: bold;
-          margin-top : 40px;
-        }
-        #about_us>p{
-          margin-top:40px;
-          font-size: 18px;
-          width:100%;
-        }
-        
+     
 
         #main3{
           position: relative;
-          background: #f1f7ee;
-          top: 25.4%;
-          border : 1px solid #f1f7ee;
+          top: 18.4%;
           width : 100%;
           min-height: 800px;
           text-align: center;
-          border-top: 1px solid gainsboro;
         }
         #main3>h2:nth-child(1){
           color: tomato;
@@ -214,7 +209,7 @@
         }
         .main3_pic{
           position: relative;
-          width: 22%;
+          width: 24.5%;
           display: inline-block;
           box-shadow: 10px 10px 15px rgb(50,50,50);
           overflow: hidden;
@@ -261,7 +256,7 @@
         }
         #main4{
           position: relative;
-          top: 28.4%;
+          top: 17.4%;
           width : 100%;
           min-height: 750px;
           text-align: center;
@@ -269,14 +264,24 @@
           background: url(images/backpack.jpg) no-repeat;
           background-size : 100%;
          }
+         #main4Title{
+           margin : 40px 0 40px 0;
+           font-weight: bold;
+           color: tomato;
+
+         }
          #main5{
           position: relative;
           height: 600px;
-          top: 29%;
+          top: 20%;
           width : 100%;
           text-align: center;
           background-size : 100%;
-        
+          background: white;
+        }
+        #main5Title{
+          margin: 40px 0 40px 0;
+          font-weight: bolder;
         }
         .statistics_body{
           display: grid;
@@ -309,11 +314,13 @@
     </style>
 </head>
 <body>
-    <div id = "menubar">
+    <span id = "menubar">
                 <a id = "logo" href = ""><img src="images/logo-horizontal-300px.png"/></a>
                 
-    </div>
-  <div id = "up"><a href= "#main1"><i class="fas fa-angle-double-up fa-4x"></i></a></div>
+    </span>
+    
+  <span id = "up"><a href= "#main1"><i class="fas fa-angle-double-up fa-4x"></i></a></span>
+  
   <div>
       <div id = "main1">
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -360,9 +367,12 @@
       </div>
 
 
-
       <div id = "main2">
-          <h2>최근 게시물</h2>
+        
+        <h3 id="main2Title">최근 게시물</h3>
+
+          <p>최근에 등록된 레시피를 찾아보세요.</p>
+          <hr>
           <div class="recentPost">
             <div class="recentPost_body">
                 <div>1</div>
@@ -430,7 +440,7 @@
 
 
       <div id = "main4"> 
-        <h2>오늘 같은 날씨엔,</h2>
+        <h3 id= "main4Title">오늘 같은 날씨엔,</h3>
         <div class="whetherRecommendation">
           <div class="whetherRecommendation_body">
               <div>1</div>
@@ -453,7 +463,7 @@
       </div>
       
       <div id="main5">
-        <h2>이달의 추천왕</h2>
+        <h3 id="main5Title">이달의 추천왕</h3>
         <div class="statistics_body">
 
         <div>left-block empty</div>
@@ -471,7 +481,10 @@
 
     </div>
 
-       
+    <footer style="position: relative; width: 100%; background: gray; height: 300px; color:white;">
+      
+        footer 영역
+      </footer>  
 
 </body>
 </html>
