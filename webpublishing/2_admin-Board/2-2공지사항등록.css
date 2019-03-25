@@ -1,0 +1,281 @@
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+}
+
+#wrapper { 
+ margin: 0 auto;
+ width:1200px;
+ /* width: 922px; */
+}
+
+#logo{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white; 
+}
+
+
+#bt_logo{
+    width: 40px;
+    height: 40px;
+    margin-top : -20px;
+    border-radius: 50%;
+    margin-left: auto; margin-right: auto; display: block;
+    background-color: white;
+}
+
+
+#header {
+width:1200px;
+ color: #333;
+ /* width: 902px; */
+ padding: 10px;
+ height: 180px;
+ margin: 20px 0px 0px 0px;
+ background-color : white;
+ text-align: center;
+ background-image: url('../이미지/salad-2068220_1920.jpg');
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ opacity: 0.8;
+}
+
+
+#header a {
+    text-decoration: none;
+    background-color: tomato;
+    color: white;
+}
+
+
+#navigation {
+ color: #333;
+ padding: 10px;
+ margin: 0px 0px 0px 0px;
+ background-color:tomato;
+ text-align: center;
+ width:1200px;
+}
+
+
+#footer { 
+ width:1200px;
+ height: 30px;
+ clear: both;
+ color: white;
+ background:tomato;
+ padding: 20px;
+}
+
+
+
+
+/* 상단 메뉴 */
+.admin > ul > li{
+    display: inline-block;
+    background-color:tomato;
+    width:250px;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 19px;
+}
+
+
+/* admin a 링크 */
+.admin a{
+    text-decoration: none; 
+    color:white;
+}
+
+.admin li > ul {
+    display:none; 
+    text-align: left;
+    list-style: none;
+    height:auto;
+    padding:0px;
+    margin:0px;
+    border:0px;
+    position:absolute;
+    width:200px;
+    z-index:200;
+}
+
+.admin li:hover a {
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+}
+
+
+/* 마우스 커서 올리면 서브메뉴 */
+.admin li:hover ul {
+        display:block;   
+        text-align: center;
+        width:250px;
+        background-color : tomato;
+        padding: 15px 0px;
+		background: tomato;
+		opacity: 1;
+		visibility: visible;
+        box-shadow: 1px 1px 7px tomato;
+        transition: 2s;
+		animation-duration: 1s;
+        animation-timing-function: ease;
+}
+
+
+/* 메뉴 눌렀을 때 효과 */
+.admin li:hover ul li a {
+    color: white;
+}
+
+
+#content { 
+    border: 1px solid tomato;
+    float: left;
+    color: #333;
+    margin: 5px 5px; 
+    width:1190px; 
+    min-height: 600px;
+    display: flex;
+    justify-content:center;
+    background-color: white;
+   }
+   
+
+
+
+   /* 글 등록 */
+   
+   * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .bodycontent {
+    padding: 20px;
+    margin : 0 auto;
+    font-size: 14px;
+    font-family: "Nanum Gothic", sans-serif;
+  }
+
+  form header {
+    margin: 0 0 20px 0; 
+  }
+
+  form header div {
+    font-size: 90%;
+    color: #999;
+  }
+
+  form header h2 {
+    margin: 0 0 10px 0;
+  }
+
+  form > div {
+    clear: both;
+    overflow: hidden;
+    padding: 1px;
+    margin: 0 0 5px 0;
+  }
+
+  form > div > fieldset > div > div {
+    margin: 0 0 5px 0;
+  }
+
+  form > div > label,
+  legend {
+      width: 25%;
+    float: left;
+    padding-right: 10px;
+  }
+
+  form > div > div,
+  form > div > fieldset > div {
+    width: 75%;
+    float: right;
+  }
+
+  form > div > fieldset label {
+      font-size: 90%;
+  }
+
+
+  fieldset {
+    border: 0;
+    padding: 0;
+  }
+  
+  input[type=text],
+  textarea {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+
+  input[type=text] {
+    width: 50%;
+  }
+
+  input[type=text]:focus,
+  textarea:focus {
+    outline: 0;
+    border-color: tomato;
+  }
+  
+
+  input[type=submit] {
+    background-color: tomato;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Nanum Gothic", sans-serif;
+  }
+
+  @media (max-width: 600px) {
+    form > div {
+      margin: 0 0 15px 0; 
+    }
+    form > div > label,
+    legend {
+        width: 100%;
+      float: none;
+      margin: 0 0 5px 0;
+    }
+    form > div > div,
+    form > div > fieldset > div {
+      width: 100%;
+      float: none;
+    }
+    input[type=text],
+    textarea,
+    select {
+      width: 100%; 
+    }
+  }
+
+  @media (min-width: 1200px) {
+    form > div > label,
+      legend {
+        text-align: right;
+    }
+  }
+
+
+
+
+
+
+
