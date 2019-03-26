@@ -113,7 +113,9 @@
         font-size: 45px;
     }
 
+
     /* responsive menus */
+
 
     @media(max-width:568px) {
         .navbar-nav {
@@ -437,6 +439,69 @@
         border-radius: 20px;
         background-color: #ff712c;
     }
+    #table {
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+
+  table {
+    background: white;
+    box-shadow: 0 10px 30px rgba(225, 225, 225, 0.5);
+  }
+
+  thead tr {
+    height: 45px;
+  }
+
+  .title-td {
+    position: relative;
+  }
+
+  .title-td span {
+    position: relative;
+    top: 6px;
+  }
+
+  input {
+    border-radius: 0 !important;
+    border: 1px solid #ddd !important;
+    box-shadow: 0 10px 30px rgba(225, 225, 225, 0.4) !important;
+  }
+
+  .button {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(225, 225, 225, 0.4);
+    border: none;
+  }
+
+  .red,
+  .remove {
+    background: #e74c3c;
+  }
+
+  .green {
+    background: #2ecc71;
+  }
+
+  tr>td {
+    position: relative;
+  }
+
+  .static {
+    position: static !important;
+  }
+
+  .remove {
+    margin-top: 15px;
+  }
 </style>
 
 <body>
@@ -470,7 +535,6 @@
                             <ul class="v-tab_tab-head">
                                 <li class="active" rel="vtab0">상세검색</li>
                                 <li rel="vtab1">종류</li>
-                                <li rel="vtab2">방법</li>
                                 <li rel="vtab3">난이도</li>
                                 <li rel="vtab4">시간대</li>
                                 <li rel="vtab5">날씨</li>
@@ -487,10 +551,7 @@
                             </div>
                             <div id="vtab1" class="v-tab_content">
                                 <input type="checkbox" id="c1" name="cc" />
-                                <label for="c1"><span></span>국/탕</label>
-                                <br>
-                                <input type="checkbox" id="c2" name="cc" />
-                                <label for="c2"><span></span>찌개</label>
+                                <label for="c1"><span></span>국/탕/찌개</label>
                                 <br>
                                 <input type="checkbox" id="c1" name="cc" />
                                 <label for="c1"><span></span>반찬</label>
@@ -503,29 +564,29 @@
                                 <br>
                                 <input type="checkbox" id="c2" name="cc" />
                                 <label for="c2"><span></span>음료</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>면</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>만두</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>밥</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>빵/디저트</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>기타</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>밥</label>
 
                             </div>
                             <!-- #tab1 -->
 
-                            <div id="vtab2" class="v-tab_content">
-                                <input type="checkbox" id="c1" name="cc" />
-                                <label for="c1"><span></span>조림</label>
-                                <br>
-                                <input type="checkbox" id="c2" name="cc" />
-                                <label for="c2"><span></span>무침</label>
-                                <br>
-                                <input type="checkbox" id="c1" name="cc" />
-                                <label for="c1"><span></span>비빔</label>
-                                <br>
-                                <input type="checkbox" id="c2" name="cc" />
-                                <label for="c2"><span></span>찜</label>
-                                <br>
-                                <input type="checkbox" id="c1" name="cc" />
-                                <label for="c1"><span></span>절임</label>
-                                <br>
-                                <input type="checkbox" id="c2" name="cc" />
-                                <label for="c2"><span></span>튀김</label>
-                            </div>
+                            
                             <!-- #tab2 -->
 
                             <div id="vtab3" class="v-tab_content">

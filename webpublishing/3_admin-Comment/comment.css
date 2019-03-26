@@ -1,0 +1,299 @@
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+}
+
+#wrapper { 
+ margin: 0 auto;
+ width:1200px;
+ /* width: 922px; */
+}
+
+#logo{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white; 
+}
+
+#bt_logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: auto; margin-right: auto; display: block;
+    background-color: white;
+}
+
+
+
+#header {
+width:1200px;
+ color: #333;
+ /* width: 902px; */
+ padding: 10px;
+ height: 180px;
+ margin: 20px 0px 0px 0px;
+ background-color : white;
+ text-align: center;
+ background-image: url('../이미지/salad-2068220_1920.jpg');
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ opacity: 0.8;
+}
+
+
+#header a {
+    text-decoration: none;
+    background-color: tomato;
+    color: white;
+}
+
+
+#navigation {
+ color: #333;
+ padding: 10px;
+ margin: 0px 0px 0px 0px;
+ background-color:tomato;
+ text-align: center;
+ width:1200px;
+}
+
+
+#footer { 
+ width:1200px;
+ height: 30px;
+ clear: both;
+ color: white;
+ background:tomato;
+ padding: 10px;
+ font-size: 20px;
+ font-family: "Nanum Gothic", sans-serif;
+}
+
+
+#bt_rogo p {
+    font-size: 12px;
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+
+
+/* 상단 메뉴 */
+.admin > ul > li{
+    display: inline-block;
+    background-color:tomato;
+    width:250px;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 19px;
+}
+
+/* admin a 링크 */
+.admin a{
+    text-decoration: none; 
+    color:white;
+}
+
+
+.admin li > ul {
+    display:none; 
+    text-align: left;
+    list-style: none;
+    height:auto;
+    padding:0px;
+    margin:0px;
+    border:0px;
+    position:absolute;
+    width:200px;
+    z-index:200;
+}
+
+.admin li:hover a {
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+}
+
+/* 마우스 커서 올리면 서브메뉴 */
+.admin li:hover ul {
+        display:block;   
+        text-align: center;
+        width:250px;
+        background-color : tomato;
+        padding: 15px 0px;
+		background: tomato;
+		opacity: 1;
+		visibility: visible;
+        box-shadow: 1px 1px 7px tomato;
+        transition: 2s;
+		animation-duration: 1s;
+        animation-timing-function: ease;
+}
+
+
+/* 메뉴 눌렀을 때 효과 */
+.admin li:hover ul li a {
+    color: white;
+}
+
+
+#content { 
+    border: 1px solid white;
+    float: left;
+    color: #333;
+    margin: 5px 5px; 
+    width:1210px; 
+    min-height: 400px;
+    display: flex;
+    justify-content:center;
+   }
+
+
+   #page{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 40%;
+    text-align: center;
+    font-size: 18px;
+    grid-column : 1/6;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom : 20px;
+ 
+ }
+ 
+ /* 글 검색 */
+
+.searchbody{
+    background: white;
+  }
+   
+
+.box{
+    margin: 100px auto;
+    width: 300px;
+    height: 50px;
+  }
+
+  .container-4{
+    overflow: hidden;
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .container-4 input#search{
+    width: 300px;
+    height: 50px;
+    background: tomato;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #fff;
+    padding-left: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+  .container-4 input#search::-webkit-input-placeholder {
+     color: white;
+     font-size: 16px;
+     font-family: "Nanum Gothic", sans-serif;
+  }
+   
+   
+  .container-4 input#search:-moz-placeholder { /* Firefox 18- */
+     color: white;
+  }
+   
+  .container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
+     color: white;
+  }
+   
+
+  .container-4 input#search:-ms-input-placeholder {  
+     color: white; 
+  }
+  
+   
+  .container-4 button.icon{
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+    border: none;
+    background:  white; 
+    height: 50px;
+    width: 50px;
+    color:  black;
+    opacity: 0;
+    font-size: 10pt;
+   
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+  
+
+  .container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
+      outline: none;
+      opacity: 1;
+      margin-left: -50px;
+    }
+   
+
+    .container-4:hover button.icon:hover{
+      background: white;
+    }
+
+
+    /* 검색 위치 */
+    .search_input {
+        position: relative;
+        right: -910px;
+    }
+
+    table {
+        width :1200px;
+    }
+
+    th{
+        height: 30px;
+        font-family: "Nanum Gothic", sans-serif;
+        background-color: tomato;
+        border: 1px solid white;
+    }
+
+    td {
+        font-family: "Nanum Gothic", sans-serif;
+        border-bottom: 1px solid tomato;
+        height: 30px;
+        text-align: center;
+    }
+    .no {
+        width:100px;
+    }
+
+    .content {
+        width:400px;
+    }
+
+    .regDate {
+        width:120px;
+    }
+    .num {
+        width:120px;
+    }
+
+    .top {
+        background-color: tomato;
+    }
