@@ -9,8 +9,11 @@
     min-width: 800px;
 }
 #line{
-    background: #f7943a;
-    height: 20px;
+    border-bottom: 1px solid black;
+    /* background: #f7943a; */
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
 }
 
 /* 요리 제목, 사진 */
@@ -25,16 +28,16 @@
     display: grid;
     grid-template-rows: .5fr 2fr;
 }
-/* #top-wrapper > .top-left > div{
-    border: 0.5px solid black;
-} */
-.title{
-    border-bottom: 2px solid #f7943a; 
+.ingrd-title{
+   /*  border-bottom: 2px solid #f7943a;  */
     font-weight: bold;
+    border-right: 1px solid black;
 }
-.title > #titleinput{
-    width :  400px; height: 50px;
+input[type="text"], select{
+    background: none;
+    width : 200px; height: 40px;
 }
+
 #top-wrapper > .top-right > a > img {
     position: relative;
     top:-3px;
@@ -51,14 +54,32 @@
     display : grid;
     grid-template-columns: 1fr 1fr;
     background: whitesmoke;
-    height: 250px;
+    height: 200px;
 }
-#ingrd-wrapper > .cookinfo{
+#ingrd-wrapper > .cookinfo > .select-ingrds{
     display : grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .5fr 1fr;
     height: 50px; line-height: 50px;
-    border: 0.5px solid black;
+/*     border: 0.5px solid black; */
     margin: 10px;
+}
+
+/* 재료 */
+#wrapper-grocery{
+    height: 200px;
+}
+#wrapper-grocery > .grocery{
+    display : grid;
+    grid-template-columns: .5fr 4fr .5fr;
+}
+.grocery input[type="text"]{
+    border: 1px solid lightgrey;
+    width: 750px;
+}
+
+#wrapper-grocery > .groceryList{
+    border-top : 2px solid #f7943a;;
+    height: 150px;
 }
 
 /* 레시피 작성 */
@@ -66,7 +87,6 @@
     display : grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     height: 1300px;
-    /* max-height: auto; */
     background: white;
     border : .5px solid lightgrey;
 }
@@ -79,9 +99,6 @@
     /* max-height: auto; */
     background: white; border : .5px solid grey;
 }
-/* #refer-wrapper div{
-    background: white; border : .5px solid black;
-} */
 #refer-wrapper div > #search{
     width: 500px;
     height: 30px;
@@ -94,13 +111,12 @@
     color:  #f7943a;
 }
 
-
-
 /* 등록버튼 */
 #submit{
-    margin: 0 auto;
+    margin-top: 10px;
 }
 #submit > button{
+    margin-left : 355px;
     background: #f7943a;
     text-align: center;
     width: 250px;
@@ -109,10 +125,18 @@
 }
 
 /* 하단 */
-/* #footer{
-    background: white;
+#footer{
+    margin-top : 50px;
+    background: #f7943a;
     text-align: center;
-    line-height: 100px; 
-    color: #f7943a; font-weight: bold;
-    border: 1px solid #f7943a;
-} */
+    line-height: 100px;
+    font-weight: bold;
+    border-top: 2px solid #f7943a;
+}
+#footer > div > img {
+    margin: 0 auto;
+    background : white;
+    border-radius: 50%;
+    margin: -25px;
+    width: 65px; height: 65px;
+}

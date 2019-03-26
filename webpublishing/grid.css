@@ -1,4 +1,3 @@
-@@ -0,0 +1,205 @@
 * {
   padding: 0;
   margin: 3px;
@@ -50,15 +49,15 @@
   padding: 10px;
 }
 /* 요리 분류 bar */
-#sort-wrapper {
+/* #sort-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   background: #ed1c24;
   height: 40px;
   line-height: 40px;
   text-align: center;
   color: white;
-}
+} */
 
 /* 요리 정보 */
 #ingrd-wrapper {
@@ -69,8 +68,8 @@
 }
 #ingrd-wrapper > .cookinfo > div {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  height: 50px;
+  grid-template-columns: 1.5fr 2fr;
+  height: 40px;
   line-height: 50px;
 }
 .cookinfo {
@@ -101,10 +100,10 @@
   text-align: center;
   background: #ed1c24;
 }
-#likebar > img {
-  line-height: 30px;
-  width: 35px;
-  height: 35px;
+
+#likebar > .fas{
+  color : white;
+  border : white;
 }
 
 /* 참고레시피 이미지 */
@@ -146,6 +145,7 @@
   font-weight: bold;
   z-index: 1;
 }
+
 /* 댓글 */
 #commemt-wrapper {
   background: white;
