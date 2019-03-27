@@ -4,7 +4,7 @@ body{
  body>div{
    background: white;
  position: relative;
- left :15.5%;
+ margin : 0 auto;
  width: 1300px;
    height: 4400px;
    box-sizing: border-box;
