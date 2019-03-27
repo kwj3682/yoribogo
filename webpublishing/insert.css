@@ -27,7 +27,15 @@
 #top-wrapper > .top-left {
     display: grid;
     grid-template-rows: .5fr 2fr;
+    font-size : 20px; font-weight: bold;
+    padding: 10px;
 }
+#titleinput{
+    border-bottom : 1px solid tomato;
+    width : 400px;
+}
+
+/* 요리 정보 */
 .ingrd-title{
    /*  border-bottom: 2px solid #f7943a;  */
     font-weight: bold;
@@ -37,7 +45,6 @@ input[type="text"], select{
     background: none;
     width : 200px; height: 40px;
 }
-
 #top-wrapper > .top-right > a > img {
     position: relative;
     top:-3px;
@@ -49,7 +56,6 @@ input[type="text"], select{
     padding : 10px;
 }
 
-/* 요리 정보 */
 #ingrd-wrapper{
     display : grid;
     grid-template-columns: 1fr 1fr;
@@ -67,6 +73,7 @@ input[type="text"], select{
 /* 재료 */
 #wrapper-grocery{
     height: 200px;
+    border : 0.1px solid lightgrey;
 }
 #wrapper-grocery > .grocery{
     display : grid;
@@ -76,19 +83,20 @@ input[type="text"], select{
     border: 1px solid lightgrey;
     width: 750px;
 }
-
 #wrapper-grocery > .groceryList{
-    border-top : 2px solid #f7943a;;
+    /* border-top : 2px solid #f7943a; */
+    border-top : 2px solid tomato;
     height: 150px;
+    padding: 20px;
 }
 
 /* 레시피 작성 */
 #content-wrapper{
     display : grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    height: 1300px;
+    height: 800px;
     background: white;
-    border : .5px solid lightgrey;
+    border : .5px solid tomato;
 }
 
 /* 참고하기 */
@@ -108,7 +116,8 @@ input[type="text"], select{
     position: relative;
     left : 15px;
     top: 5px;
-    color:  #f7943a;
+    color:  tomato;
+    /* color:  #f7943a; */
 }
 
 /* 등록버튼 */
@@ -117,7 +126,8 @@ input[type="text"], select{
 }
 #submit > button{
     margin-left : 355px;
-    background: #f7943a;
+    /* background: #f7943a; */
+    background: tomato;
     text-align: center;
     width: 250px;
     height: 40px; line-height: 40px;
@@ -127,11 +137,13 @@ input[type="text"], select{
 /* 하단 */
 #footer{
     margin-top : 50px;
-    background: #f7943a;
+    /* background: #f7943a; */
+    background: tomato;
     text-align: center;
     line-height: 100px;
     font-weight: bold;
-    border-top: 2px solid #f7943a;
+    /* border-top: 2px solid #f7943a; */
+    border-top: 2px solid tomato;
 }
 #footer > div > img {
     margin: 0 auto;
