@@ -279,6 +279,10 @@ width:1200px;
         height: 30px;
         text-align: center;
     }
+
+    td:hover {
+        background : rgb(248, 202, 186)
+    }
     .no {
         width:100px;
     }

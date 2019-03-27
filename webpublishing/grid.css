@@ -20,24 +20,32 @@
 #top-wrapper > .top-left {
   display: grid;
   grid-template-rows: 0.5fr 2fr 0.5fr;
+  margin: 20px;
 }
-/* #top-wrapper > .top-left > div{
-    border: 0.5px solid black;
-} */
-.id {
+.top-title{
+  border-bottom: 2px solid #ed1c24; 
+  font-weight: bold;
+  font-size: 23px;
+}
+.idimg {
   display: grid;
   grid-template-columns: 0.1fr 1fr;
 }
-.id > div {
-  vertical-align: center;
-}
-.id > div > img {
+.idimg > div > img {
   vertical-align: center;
   width: 40px;
   height: 40px;
   /* object-fit: cover; */
   border-radius: 50%;
 }
+.id{
+  font-size: 13px;
+  margin-top : 16px;
+}
+.id > a{
+  text-decoration: none;
+}
+
 #top-wrapper > .top-right > a > img {
   position: relative;
   top: -3px;
@@ -48,23 +56,31 @@
   box-sizing: border-box;
   padding: 10px;
 }
-/* 요리 분류 bar */
-/* #sort-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  background: #ed1c24;
+
+/* 좋아요 */
+#likebar {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  color: white;
-} */
+  background: #ed1c24;
+}
+#likebar > button{
+  background: none;
+  width:950px;
+}
+#likebar > button > .fas{
+  color : white;
+  border : white;
+}
+
+/* ===========================중간======================== */
 
 /* 요리 정보 */
 #ingrd-wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr;
   background: whitesmoke;
-  height: 250px;
+  height: 300px;
 }
 #ingrd-wrapper > .cookinfo > div {
   display: grid;
@@ -83,28 +99,17 @@
   font-weight: bold;
 }
 
+
 /* 레시피 작성 */
 #content-wrapper {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  height: 1300px;
+  height: 800px;
   /* max-height: auto; */
   background: white;
   border: 0.5px solid lightgrey;
 }
 
-/* 좋아요 */
-#likebar {
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background: #ed1c24;
-}
-
-#likebar > .fas{
-  color : white;
-  border : white;
-}
 
 /* 참고레시피 이미지 */
 #referImg-wrpper {
@@ -117,6 +122,15 @@
   overflow: hidden;
 }
 
+/* #referImg-wrpper > .referImg > img {
+  position: relative;
+  top: -3px;
+  left: -3px;
+  width: 232.5px;
+  height: 226px;
+  overflow: hidden;
+  box-sizing: border-box;
+} */
 #referImg-wrpper > .referImg > img {
   position: relative;
   top: -3px;
@@ -128,8 +142,8 @@
 }
 #referImg-wrpper > .referImg:hover {
   background: rgba(255, 255, 255, 0.5);
-  /*  background: lightgrey;
-  opacity: 0.5; */
+  /* background: black;
+  opacity: 0.5;  */
 }
 #referImg-wrpper > .referImg > a {
   text-align: center;
@@ -138,6 +152,7 @@
   z-index: 1;
   margin-top: 60px;
   display: none;
+  text-decoration: none;
 }
 #referImg-wrpper > .referImg:hover a {
   display: block;
@@ -146,14 +161,14 @@
   z-index: 1;
 }
 
+/* ===========================하단======================== */
+
 /* 댓글 */
 #commemt-wrapper {
   background: white;
   border: 0.5px solid lightgrey;
   height: 600px;
   /* max-height: auto; */
-  display: grid;
-  grid-template-rows: 10fr 0.8fr;
 }
 .comment {
   display: grid;
@@ -162,9 +177,6 @@
   line-height: 50px;
   /* grid-template-rows: auto; */
 }
-/* #commemt-wrapper > .comment > div{
-    border: 0.5px solid black;
-} */
 .comment > .commid {
   display: grid;
   grid-template-columns: 0.5fr 2fr;
@@ -176,6 +188,25 @@
   grid-template-columns: 2fr 0.5fr;
   text-align: center;
 }
+.likecnt > div > button {
+  width : 60px; height: 30px;
+  /* background: none; */
+  /* background: tomato; */
+  background: none;
+  border: 1px solid #ed1c24;
+  color : #ed1c24;
+  /* font-weight: bold; */
+  border-radius: 5px;
+}
+.likecnt > div > button:focus{
+  font-weight: bold;
+  background: #ed1c24;
+  color: white;
+
+}
+.yes, .no{
+  color : black;
+}
 .commid > div > img {
   width: 40px;
   height: 40px;
@@ -183,24 +214,74 @@
   object-fit: cover;
   border-radius: 50%;
 }
+
+/* ----------댓글 페이지 번호----------  */
 #pageNo {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   width: 400px;
   margin: 0 auto;
   line-height: 38px;
 }
 #pageNo div {
   /* border: 1px solid black; */
+  height: 30px; line-height: 30px;
+  text-align: center;
+  border: .5px solid lightgrey;
+}
+#pageNo div > a{
+  text-decoration: none;
+}
+
+/* ----------댓글 등록----------  */
+#inputComm-wrapper{
+  display: grid;
+  grid-template-columns: .3fr 5fr .4fr;
+  border : .5px solid lightgrey;
+}
+#inputComm-wrapper > .inputId{
+  padding : 0; border : 0;
+  margin-top : 10px; 
+  display: grid;
+  grid-template-rows: 1fr .5fr;
+  font-size : 10px;
   text-align: center;
 }
+.inputId > div > img {
+  margin: 0; padding : 0; border : 0;
+  width : 40px; height : 40px;
+  border-radius: 50%;
+}
+
+
+
+#inputComm-wrapper > .inputbox{
+  margin-top: 10px; padding : 0; border : 0;
+  display: grid;
+  grid-template-rows: 1fr .1fr;
+}
+#inputComm-wrapper > .inputbox > .font{
+  font-size: 10px; 
+  position: relative;
+  right : -95%;
+}
+.inputbox > textarea{
+  border : .5px solid lightgrey;
+}
+.inputButton > button{
+  margin-top : 20px;
+  width: 50px; height: 50px;
+  background: #ed1c24;
+  color: white;
+}
+
+
 
 /* 하단 */
 #footer {
   height: 100px;
   background: #ed1c24;
-  text-align: center;
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
+  text-align: center; line-height: 100px;
+  color: white; font-weight: bold;
+  margin-top : 10px;
 }

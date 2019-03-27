@@ -167,6 +167,10 @@ width:1200px;
  
  }
  
+ td:hover {
+    background : rgb(248, 202, 186)
+}
+
  /* 글 검색 */
 
 .searchbody{
