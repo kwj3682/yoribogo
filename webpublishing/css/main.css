@@ -316,6 +316,11 @@ body{
 #loginButton:visited{
   text-decoration: none;
 }
+.profileBlock_body_inner:hover{
+  box-shadow: 0 0 15px 1px tomato;
+  transition: 0.5s;
+
+}
 .profileBlock_body_inner > div{
   margin-top: 20px;
 }
@@ -361,10 +366,9 @@ body{
 }
 
 #footer{
-  border : 1px solid red;
   width: 90%;
   height: 80%;
   text-align: center;
-  padding-left: 30px;
+  padding-left: 200px;
   padding-top: 30px;
 }

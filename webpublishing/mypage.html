@@ -20,29 +20,59 @@
                 <a id = "loginButton" href="login.html">로그인해주세요<i class="fas fa-user-circle fa-2x"></i></a>
     </span>
     
-  <span id = "up"><a href= "#main1"><i class="fas fa-angle-double-up fa-4x"></i></a></span>
+  <span id = "up"><a href= "#"><i class="fas fa-angle-double-up fa-4x"></i></a></span>
   
   <span id="header">
       <div>
-          <div id="settingProfile"></div>
-          <a id="profile"></a>
+          <div id="settingProfile" style="cursor: pointer;" onclick="location.href='#';"><i class="fas fa-cog fa-3x"></i></div>
+          <img id="profile" src="images/짱구.jpg"></img>
           <h2 id="id">kwj1234</h2>
-          <p>n개의 레시피를 만듬</p>
+          <p id="countRecipe">10개의 레시피를 만듬</p>
       </div>
     </span>
 
     <div>
       <div id = "recent">
         
-        <h3 id="recentTitle">최근 게시물</h3>
+        <h3 id="recentTitle">작성 게시물</h3>
 
-          <p>최근에 등록된 레시피를 찾아보세요.</p>
+          <p>총 10개의 게시물</p>
           <hr>
           <div class="recentPost">
             <div class="recentPost_body">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
+                <div class="profileBlock_body_inner">
+                    <img id = "profileBlock_body_inner_profile" src="images/짱구.jpg"/>
+                    
+                   <div>
+                     <div>방금</div>
+                     <div>kwj1234</div>
+                     <div>3.1/5</div>
+                    </div>
+                    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                  </div>
+                   <div class="profileBlock_body_inner">
+                      <img id = "profileBlock_body_inner_profile" src="images/짱구.jpg"/>
+                      
+                     <div>
+                       <div>2일 전</div>
+                       <div>kwj1234</div>
+                       <div>4/5</div>
+                      </div>
+                      <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                    </div> 
+                   <div class="profileBlock_body_inner">
+                      <img id = "profileBlock_body_inner_profile" src="images/짱구.jpg"/>
+                      
+                     <div>
+                       <div>2019-03-20</div>
+                       <div>kwj1234</div>
+                       <div>4/5</div>
+                      </div>
+                      <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                    </div> 
+                    <div id="moreInfo" style="cursor: pointer;" onclick="location.href='#';">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
             </div>
         </div>
       </div>
@@ -51,29 +81,161 @@
         <h3 id= "likeTitle">좋아요 표시한 게시물</h3>
         <div class="whetherRecommendation">
           <div class="whetherRecommendation_body">
-              <div>1</div>
-              <div>2</div>
-              <div>3</div>
-              <div>4</div>
-              <div>5</div>
-              <div>6</div>
-              <div>7</div>
-              <div>8</div>
-              <div>9</div>
-              <div>10</div>
-              <div>11</div>
-              <div>12</div>
-              <div>13</div>
-              <div>14</div>
-              <div>15</div>
+              <div class="profileBlock_body_inner">
+                  <img id = "profileBlock_body_inner_profile" src="images/profile1.jpg"/>
+                  
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+              <div class="profileBlock_body_inner">
+                  <img id = "profileBlock_body_inner_profile" src="images/profile2.png"/>
+                  
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+              <div class="profileBlock_body_inner">
+                  <img id = "profileBlock_body_inner_profile" src="images/profile3.jpg"/>
+                  
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+              <div class="profileBlock_body_inner">
+                  <img id = "profileBlock_body_inner_profile" src="images/profile4.jpg"/>
+                  
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+              <div class="profileBlock_body_inner">
+                  <img id = "profileBlock_body_inner_profile" src="images/profile5.JPG"/>
+                  
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+              <div class="profileBlock_body_inner">
+                  <img id = "profileBlock_body_inner_profile" src="images/profile6.jpg"/>
+                  
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+              <div class="profileBlock_body_inner">
+                  <img id = "profileBlock_body_inner_profile" src="images/profile7.jpg"/>
+                  
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+              <div class="profileBlock_body_inner">
+                  <img id = "profileBlock_body_inner_profile" src="images/짱구.jpg"/>
+                  
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+              <div class="profileBlock_body_inner">
+                  <img id = "profileBlock_body_inner_profile" src="images/profile8.jpg"/>
+                  
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+              <div class="profileBlock_body_inner">
+                  <i class="fas fa-user-circle fa-4x" style="color:tomato;"></i>
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+              <div class="profileBlock_body_inner">
+                  <i class="fas fa-user-circle fa-4x" style="color:tomato;"></i>
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+              <div class="profileBlock_body_inner">
+                  <i class="fas fa-user-circle fa-4x" style="color:tomato;"></i>
+                 <div>
+                   <div>방금</div>
+                   <div>kwj1234</div>
+                   <div>3.4/5</div>
+                  </div>
+                  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                </div>      
+     
           </div>
       </div>
+      </div>
+        <script>
+            function stretchLong(){
+              let div = document.querySelector(".whetherRecommendation_body");
+              for(let i = 0; i < 3;i++){
+                div.innerHTML = div.innerHTML + ` <div class="profileBlock_body_inner">
+                    <i class="fas fa-user-circle fa-4x" style="color:tomato;"></i>
+                   <div>
+                     <div>방금</div>
+                     <div>kwj1234</div>
+                     <div>3.4/5</div>
+                    </div>
+                    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                  </div>`;
+              }
+            }
+          </script>
+      <div id="moreInfo2"style="cursor: pointer;" onclick="stretchLong();">
+          <i class="fas fa-chevron-down fa-2x"></i>
       </div>
 
     </div>
 </div>
 <footer style="width: 100%; background: gray; height: 300px; color: white;">
-        footer 영역
+    <div id="footer">
+        <img src = "images/logo-vertical-300px.png" style="width: 80px;"/>
+        <p>
+            YORIBOGO Receipes
+            <br>개인정보관리책임자: 김우중
+            <br>고객센터: 010-4955-6029(평일:13:30 ~ 14:30 토요일:12:00 ~ 12:01) FAX: 02-000-000 Email:xxxxx@yoribogo.com
+            <br>
+            <br>
+            copyright @ YORIBOGO Corp. All Right Reserved.
+          </p>
+    </div>  
 </footer>
 
 </body>
