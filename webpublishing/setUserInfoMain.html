@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/setUserInfoMain.css">
+   <title>Document</title>
+
+</head>
+<body>
+    <span id = "menubar">
+                <a id = "logo" href = "main.html"><img src="images/logo-horizontal-300px.png"/></a>
+    </span>
+    
+  <span id = "up"><a href= "#"><i class="fas fa-angle-double-up fa-4x"></i></a></span>
+  
+  <span id="header">
+      <div>
+          <div id="settingProfile" style="cursor: pointer;" onclick="location.href='setUserInfo.html';"><i class="fas fa-cog fa-3x"></i></div>
+          <img id="profile" src="images/짱구.jpg" onclick="location.href='mypage.html';"></img>
+          <h2 id="id">kwj1234</h2>
+          <p id="countRecipe">10개의 레시피를 만듬</p>
+      </div>
+</span>
+<div id="body">
+        <div class="wrapper">
+                <div class="container">
+                    <h4>회원 정보 수정</h4>
+                    <form class="form">
+                        <p>kwj1234</p>
+                        <p>kwjasda@naver.com</p>
+                        <input type="password" placeholder="새 비밀번호">
+                        <input type="password" placeholder="새 비밀번호 확인">
+                        <!--<button type="submit" id="login-button">로그인</button>-->
+                        <a href="mypage.html" id="login-button">회원정보수정</a>
+                        <a href="deleteUserInfo.html" id="delete-button">회원탈퇴를 원하시나요?</a>
+                    </form>
+                    </div>
+                </div>                  
+</div>
+      
+
+<footer style="width: 100%; background: gray; height: 300px; color: white;">
+    <div id="footer">
+        <img src = "images/logo-vertical-300px.png" style="width: 80px;"/>
+        <p>
+            YORIBOGO Receipes
+            <br>개인정보관리책임자: 김우중
+            <br>고객센터: 010-4955-6029(평일:13:30 ~ 14:30 토요일:12:00 ~ 12:01) FAX: 02-000-000 Email:xxxxx@yoribogo.com
+            <br>
+            <br>
+            copyright @ YORIBOGO Corp. All Right Reserved.
+          </p>
+    </div>  
+</footer>
+
+</body>
+</html>

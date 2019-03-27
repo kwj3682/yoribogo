@@ -1,0 +1,297 @@
+body{
+    background: gainsboro;
+  }
+  *{
+    background: cover;
+  }
+   body > div{
+       background: white;
+       position: relative;
+       margin : 0 auto;
+       width: 1300px;
+       box-sizing: border-box;
+   }
+   #header{
+      display: block;
+      padding-top: 100px;
+       width: 100%;
+       height: 500px;
+       text-align: center;
+       background-size: cover;
+       background-image: url(../images/food2.jpg);
+      }
+   #header > div:nth-child(1){
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0, 0, 0, 0.6) 100%);
+      height: 100%;
+   }
+   #settingProfile{
+       position: absolute;
+       width: 50px;
+       height: 50px;
+       right: 35px;
+       color: tomato;     
+       transition : 0.3s;  
+    }
+    #settingProfile:hover{
+        color: red;
+        transform:rotate(30deg);
+    }
+      #profile{
+        
+        cursor: pointer;
+       margin-top : 30px;
+       display: inline-block;
+       width: 150px;
+       height: 150px;
+       border-radius: 75px;
+       animation: translateUp 1s linear;
+       }
+    @keyframes translateUp{ 
+        0%{
+          transform: translateY(100px);
+          box-shadow : 1px 1px 0px  white;
+        }
+        50%{
+          box-shadow : 1px 1px 20px yellow; 
+        }
+        100%{
+          transform: translateY(0px);
+          box-shadow : 1px 1px 0px white;
+        } 
+    }
+   #id{
+       font-weight: bolder;
+       margin-top : 30px;
+       font-size: 40px;
+       color: white;
+      }
+   #countRecipe{
+     color: white;
+     font-size : 18px;
+   }
+   li{
+     list-style: none;
+   }
+   a{
+     text-decoration: none;
+     color : white;
+   }
+   *{
+     margin : 0;
+     padding : 0;
+     box-sizing: border-box;
+     font-family: 'Muli', sans-serif;
+   }
+   #up{
+     position: fixed;
+     width : 50px;
+     height : 75px;
+     bottom : 4%;
+     right: 1%;
+     z-index: 1;
+   }
+   #up>a>i{
+     transition:.4s;
+     color: tomato;
+   }
+   #up>a>i:hover{
+     color : red;
+   }
+   
+   #menubar{
+     position: fixed;
+     display: block;
+     z-index: 100;
+     top: 0;
+     width:100%;
+     height: 70px;
+     background: azure;
+     opacity: 0.7;
+   }
+   #logo{
+     position: absolute;
+     left : 2%;
+     width:280px;
+     height: 100%;
+   }
+   #logo>img{
+       width:133px;
+   }
+   #menubar>ul{
+       position: absolute;
+       right : 0;
+       top:0;
+       line-height: 10px;
+     }    
+     #menubar>ul>li{
+       display: inline-block;
+       width : 180px;
+       font-size: 23px;
+       text-align: center;
+
+     }
+     #menubar>ul>li>a{
+       line-height: 140px;
+       font-weight: bolder;
+       color:  lightgray;
+       transition : .7s;
+   }
+   #menubar>ul>li>a:hover{
+       color:slategray;
+       text-decoration: unset;
+   }
+
+   #body{
+     width: 60%;
+     height: 600px;
+   }
+   .wrapper {
+    background: #50a3a2;
+    background:white;
+    top: 270px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .form{
+      margin-top: 30px;
+  }
+  
+  form input:focus {
+    background-color: white;
+    width: 300px;
+    color: #53e3a6;
+  }
+  .wrapper.form-success .container h1 {
+    -webkit-transform: translateY(85px);
+            transform: translateY(85px);
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 80px 0;
+    height: 400px;
+    text-align: center;
+  }
+  .container h1 {
+    font-size: 40px;
+    margin-top : 10px;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-put;
+    font-weight: 200;
+  }
+  
+  .container h5{
+      margin-top: 30px;
+  }
+  .signupForm{
+      margin-top : -20px;
+  }
+  form {
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+  }
+  form p{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+      outline: 0;
+     border: 1px solid gainsboro;
+    background-color: darkgray;
+ width: 250px;
+ border-radius: 3px;
+ padding: 10px 15px;
+ margin: 0 auto 10px auto;
+ display: block;
+ text-align: center;
+ font-size: 18px;
+ color: white;
+ transition-duration: 0.25s;
+ font-weight: 300;
+  }
+  form input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: 0;
+    border: 1px solid gainsboro;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 250px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    transition-duration: 0.25s;
+    font-weight: 300;
+  }
+  form input:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  form button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: 0;
+    background-color: white;
+    border: 0;
+    padding: 10px 15px;
+    color: #53e3a6;
+    border-radius: 3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+  }
+  form button:hover {
+    background-color: #f5f7f9;
+  }
+  #login-button{
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    width: 250px;
+    height: 50px;
+    border-radius: 4px;
+    margin: 0 auto;
+    background: white;
+    border :1px solid gainsboro;
+    line-height: 50px;
+    color: #53e3a6;
+    transition: .3s;
+  }
+  #login-button:hover{
+    background: rgba(0, 10, 105,0.2);
+    color : white;
+  }
+  #delete-button{
+    text-decoration: none;
+    padding-top : 20px;
+    font-size: 14px;
+    display: block;
+    width: 250px;
+    height: 50px;
+    border-radius: 4px;
+    margin: 0 auto;
+    background: white;
+    color: gray;
+    transition: .3s;
+  }
+  #delete-button:hover{
+    color : red;
+    text-decoration: underline;
+  }
+
+#footer{
+  width: 90%;
+  height: 80%;
+  text-align: center;
+  padding-left: 200px;
+  padding-top: 30px;
+}
