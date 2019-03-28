@@ -342,6 +342,11 @@ body{
   font-size: 17px;
   font-weight: bolder;  
 }
+.paragraph{
+  font-weight: bold;  
+  margin-top : 10px;
+  font-size: 15px;
+}
 .fa-star{
   color : #f7943a;
 }
