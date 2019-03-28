@@ -323,7 +323,7 @@ body{
   width: 300px;
   height: 300px;
   border : 1px solid gainsboro;
- }
+}
 
 
 .innerWrapper{
@@ -333,17 +333,17 @@ body{
   background: rgba(255,255,255,0.7);
 }
 .innerWrapper_inner{
- width: 100%;
- height: 300px;
+  width: 100%;
+  height: 300px;
 }
 
 .profileBlock_body_inner{
- margin-left: 10px;
- cursor: pointer;
+  margin-left: 10px;
+  cursor: pointer;
 }
 .profileBlock_body_inner:hover{
- box-shadow: 0 0 15px 1px tomato;
- transition: 0.5s;
+  box-shadow: 0 0 15px 1px tomato;
+  transition: 0.5s;
 } 
 .fa-5x{
  color:tomato;
@@ -387,6 +387,11 @@ display: inline-block;
   text-align: left;
   font-size: 17px;
   font-weight: bolder;  
+}
+.paragraph{
+  font-weight: bold;  
+  margin-top : 10px;
+  font-size: 15px;
 }
 .fa-star{
  color : #f7943a;

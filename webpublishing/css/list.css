@@ -244,6 +244,7 @@ body{
 
 .btn > form > button {
   font-weight: bold;
+  cursor: pointer;
   color: tomato;
   width: 100px;
   height: 40px;
@@ -293,4 +294,28 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#loginButton{
+  position: absolute;
+  display: block;
+  top: 15px;
+  right: 50px;
+  color: tomato;
+  font-size: 15px;
+  font-weight: bolder;
+}
+#loginButton:hover{
+  text-decoration: none;
+}
+#loginButton:visited{
+  text-decoration: none;
+}
+#footer{
+  width: 90%;
+  height: 80%;
+  text-align: center;
+  margin : 0 auto;
+  padding : 0 auto;
+  padding-top: 30px;
 }
