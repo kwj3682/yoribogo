@@ -73,7 +73,7 @@ input[type="text"], select{
 /* 재료 */
 #wrapper-grocery{
     height: 200px;
-    border : 0.1px solid lightgrey;
+    border : 0.1px solid whitesmoke;
 }
 #wrapper-grocery > .grocery{
     display : grid;
@@ -94,9 +94,9 @@ input[type="text"], select{
 #content-wrapper{
     display : grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    height: 800px;
+    height: 1300px;
     background: white;
-    border : .5px solid tomato;
+    border : .5px solid lightgrey;
 }
 
 /* 참고하기 */
@@ -136,19 +136,10 @@ input[type="text"], select{
 
 /* 하단 */
 #footer{
-    margin-top : 50px;
-    /* background: #f7943a; */
-    background: tomato;
+    width: 90%;
+    height: 80%;
     text-align: center;
-    line-height: 100px;
-    font-weight: bold;
-    /* border-top: 2px solid #f7943a; */
-    border-top: 2px solid tomato;
-}
-#footer > div > img {
-    margin: 0 auto;
-    background : white;
-    border-radius: 50%;
-    margin: -25px;
-    width: 65px; height: 65px;
-}
+    margin : 0 auto;
+    padding : 0 auto;
+    padding-top: 30px;
+  }
