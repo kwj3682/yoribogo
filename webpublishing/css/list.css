@@ -1,0 +1,296 @@
+body{
+  background: gainsboro;
+}
+ body> .container{
+   margin: 0 auto;
+   background: white;
+  width: 1300px;
+   height: 2000px;
+   box-sizing: border-box;
+ }
+ li{
+   list-style: none;
+ }
+ a{
+   text-decoration: none;
+   color : white;
+ }
+ *{
+   margin : 0;
+   padding : 0;
+   box-sizing: border-box;
+   font-family: 'Muli', sans-serif;
+ }
+ #up{
+   position: fixed;
+   width : 50px;
+   height : 75px;
+   bottom : 4%;
+   right: 1%;
+   z-index: 1;
+ }
+ #up>a>i{
+   transition:.4s;
+   color: tomato;
+ }
+ #up>a>i:hover{
+   color : red;
+ }
+ #main1{
+   overflow: hidden;
+ }
+ 
+ #menubar{
+   position: fixed;
+   z-index: 100;
+   top: 0;
+   width:100%;
+   height: 70px;
+   background: azure;
+   opacity: 0.7;
+ }
+ #logo{
+   position: absolute;
+   left : 2%;
+   width:280px;
+   height: 100%;
+ }
+ #logo>img{
+     width:133px;
+ }
+ #menubar>ul{
+     position: absolute;
+     right : 0;
+     top:0;
+     line-height: 10px;
+   }    
+   #menubar>ul>li{
+     display: inline-block;
+     width : 180px;
+     font-size: 40px;
+     text-align: center;
+
+   }
+   #menubar>ul>li>a{
+     line-height: 140px;
+     font-weight: bolder;
+     color:  lightgray;
+     transition : .7s;
+ }
+ #menubar>ul>li>a:hover{
+     color:slategray;
+     text-decoration: unset;
+ }
+
+ 
+.top{
+   height: 100px;
+ }
+.sort {
+  display: flex;
+  justify-content: flex-end;
+  height:50px;
+}
+.wrapper {
+  grid-gap: 20px;
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows: 400px 400px 400px;
+  padding : 20px;
+}
+.wrapper > div{
+  align-items: center;
+  justify-content: center;
+}
+
+.inputSort {
+  padding-left: 1em;
+  padding-right: 1.5em;
+  position: relative;
+  margin-right: 30px;
+}
+.inputSort input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.inputSort input + label {
+  font-size: 65%;
+  width: 100%;
+  height: 100%;
+  line-height: inherit;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  opacity: .25;
+  transition: opacity 200ms ease;
+}
+.inputSort input + label::before {
+  padding-right: .5em;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.inputSort input + label.sort_asc::before {
+  color: tomato;
+  content: "▲";
+  top: 0;
+}
+.inputSort input + label.sort_desc::before {
+  color: tomato;
+  content: "▼";
+  bottom: 0;
+}
+.inputSort input:checked + label {
+  opacity: 1;
+  pointer-events: none;
+}
+
+
+
+.recipe {
+	width: 400px;
+	margin: 0px auto;
+	background-color: white;
+  box-shadow: 0px 5px 20px #555;
+  cursor: pointer;
+}
+.recipe a {
+	color: #333;
+	text-decoration: none;
+}
+.recipe:hover .image img {
+  display: flex;
+  width: 110%;
+  filter:opacity(0.2) grayscale();
+}
+.image {
+  height: 250px;
+	position: relative;
+	overflow: hidden;
+}
+
+.image img {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	filter: brightness(1);
+	transition-property: filter width;
+  transition-duration: .3s;
+  z-index: 0;
+}
+.quality{
+  position :absolute;
+  text-align: center;
+  display: block;
+  top:40%;
+  z-index: 0;
+  font-weight: bolder;
+
+}
+.quality > i {
+  margin-left : 53px;
+}
+.recipe:hover .quality{
+  font-size : 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index :50;
+  color:tomato;
+}
+.body{
+  height: 150px;
+  overflow: hidden;
+  text-align: center;
+  padding :10px;
+}
+
+.title,
+.content {
+	font-family: 'Playfair Display', serif;
+}
+.date,
+.title {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.date,
+.content,
+#case-title {
+	color: #777;
+}
+.date{
+  display: flex;
+  justify-content: space-between;
+}
+.dateWriter{
+  display: inline-block;
+}
+
+.btn > form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn > form > button {
+  font-weight: bold;
+  color: tomato;
+  width: 100px;
+  height: 40px;
+  border: 2px solid tomato;
+  text-align: center;
+  transition: .3s;
+  border-radius: 5px;
+  background: white;
+  margin-right : 30px;
+}
+.btn > form > button:hover{
+  border-radius: 30px;
+}
+.mid {
+  height: 30px;
+  display: flex;
+  color:rgb(240, 186, 51);
+}
+.title{
+  height: 40px;
+}
+.content{
+  height: 40px;
+}
+.content_inner{
+  width:100%;
+  height:100%;
+}
+.bot{
+  display: flex;
+  justify-items: flex-end;
+  height: 40px;
+}
+.writer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mid > .star {
+  margin-left: 10%;
+  width: 50%;
+}
+.mid > .date {
+  width: 100%;
+}
+.kcal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

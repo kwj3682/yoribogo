@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<style>
+
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="left">
+
+            </div>
+            <div class="logo">
+                <img src='/yori5.png' />
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+        <div class="menu">
+
+            <div class="menu_center">
+
+                <div class="navbar">
+                    <span class="open-slide">
+                        <a href="#" onclick="openLeftMenu()">
+                            <div>상세검색</div>
+                        </a>
+                    </span>
+                </div>
+                <form>
+                    <div id="left-menu" class="side-nav">
+                        <div class="side">
+                            <a href="#" class="btn-close" onclick="closeLeftMenu()">&times;</a>
+                            <ul class="v-tab_tab-head">
+                                <li class="active" rel="vtab0">상세검색</li>
+                                <li rel="vtab1">종류</li>
+                                <li rel="vtab3">난이도</li>
+                                <li rel="vtab5">날씨</li>
+                                <li rel="vtab6">양식</li>
+                                <li rel="vtab7">열량</li>
+                                <li rel="vtab8">조리시간</li>
+                                <li rel="vtab9">주의</li>
+                            </ul>
+                        </div>
+
+                        <div class="v-tab_container">
+                            <div id="vtab0" class="v-tab_content">
+
+                            </div>
+                            <div id="vtab1" class="v-tab_content">
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>국/탕/찌개</label>
+                                <br>
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>반찬</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>스프</label>
+                                <br>
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>샐러드</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>음료</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>면</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>만두</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>밥</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>빵/디저트</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>기타</label>
+
+                            </div>
+                            <!-- #tab1 -->
+
+
+                            <!-- #tab2 -->
+
+                            <div id="vtab3" class="v-tab_content">
+                                <h2>난이도</h2>
+                                <br>
+                                <br>
+                                <input type="range" class="range" value="1" step="1" min="1" max="5">
+                                <br>
+                                <ul class="range-labels">
+                                    <li class="active selected"></li>
+                                    <li>매우 쉬움</li>
+                                    <li>쉬움</li>
+                                    <li>보통</li>
+                                    <li>어려움</li>
+                                    <li>매우 어려움</li>
+
+                                </ul>
+                            </div>
+                            <!-- #tab3 -->
+
+
+                            <div id="vtab5" class="v-tab_content">
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>맑은 날</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>비 오는 날</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>흐린 날</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>눈 오는 날</label>
+                                <br>
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>추운 날</label>
+                                <br>
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>더운 날</label>
+                            </div>
+                            <div id="vtab6" class="v-tab_content">
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>한식</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>일식</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>중식</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>서양식</label>
+                                <br>
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>동남 아시아 음식</label>
+                                <br>
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>기타</label>
+                            </div>
+                            <div id="vtab7" class="v-tab_content">
+                                <div class="col6 slider">
+                                    <p>
+
+                                        <input type="text" id="amount" readonly>
+                                    </p>
+                                    <div id="slider-range"></div>
+                                </div>
+                            </div>
+                            <div id="vtab8" class="v-tab_content">
+
+                            </div>
+                            <div id="vtab9" class="v-tab_content">
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>고열량</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>고당(당뇨환자)</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>채식주의자</label>
+                                <br>
+                                <input type="checkbox" id="c2" name="cc" />
+                                <label for="c2"><span></span>할랄푸드</label>
+                                <br>
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>임산부</label>
+                                <br>
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>고염</label>
+                                <br>
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>고지방</label>
+                                <br>
+                                <input type="checkbox" id="c1" name="cc" />
+                                <label for="c1"><span></span>영유아</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="search">
+                    <div class="search">
+                        <form action="" method="">
+                            <input type="search" placeholder="오늘 뭐 먹지?">
+                            <button>검색</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="navbar">
+                    <span class="open-slide">
+                        <a href="#" onclick="openRightMenu()">
+                            <div>
+                                재료검색
+                            </div>
+                        </a>
+                    </span>
+                </div>
+
+                <form>
+                    <div id="right-menu" class="right-nav">
+                        <a href="#" class="btn-close" onclick="closeRightMenu()">&times;</a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="http://codepen.io/MilanMilosev/pen/EoLBjo"></script>
+        <script>
+            function openLeftMenu() {
+                document.getElementById('left-menu').style.width = '50%';
+                document.getElementById('main').style.marginLeft = '250px';
+            }
+
+            function closeLeftMenu() {
+                document.getElementById('left-menu').style.width = '0';
+                document.getElementById('main').style.marginLeft = '0';
+            }
+            function openRightMenu() {
+                document.getElementById('right-menu').style.width = '50%';
+                document.getElementById('main').style.marginLeft = '250px';
+            }
+
+            function closeRightMenu() {
+                document.getElementById('right-menu').style.width = '0';
+                document.getElementById('main').style.marginLeft = '0';
+            }
+            $(".v-tab_content").hide();
+            $(".v-tab_content:first").show();
+
+            $(".v-tab_tab-head li").click(function () {
+
+                $(".v-tab_content").hide();
+                var activeTab = $(this).attr("rel");
+                $("#" + activeTab).fadeIn();
+                $(".v-tab_tab-head li").removeClass("active");
+                $(this).addClass("active");
+
+
+            });
+
+            document.addEventListener('DOMContentLoaded',
+                function (event) {
+                    $("#slider-range").slider({
+                        range: true,
+                        min: 0,
+                        max: 2000,
+                        values: [350, 500],
+                        step: 50,
+                        slide: function (event, ui) {
+                            var max = $("#slider-range").slider('option', 'max');
+                            $("#amount").val(ui.values[0] + "Kcal" + " - " + ui.values[1] + "Kcal");
+                            if (ui.values[1] == max) $('#amount').val($('#amount').val() + '+');
+                        }
+                    });
+                    $("#amount").val($("#slider-range").slider("values", 0) + "Kcal" + " - " + $("#slider-range").slider("values", 1) + "Kcal");
+                    $(".ui-widget-header").append($("input#amount, .triangle"));
+                })
+            copyright('');
+           
+        </script>
+</body>
+
+</html>
