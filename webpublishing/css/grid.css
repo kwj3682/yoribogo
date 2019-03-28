@@ -3,10 +3,16 @@
   margin: 3px;
   border: 0;
 }
+body{
+  background: gainsboro;
+
+}
 .all {
   margin: auto;
   width: 60em;
   min-width: 800px;
+  padding-bottom: 30px;
+  background : white;
 }
 
 /* 요리 제목, 사진, 아이디 정보 */
@@ -276,12 +282,11 @@
 }
 
 
-
-/* 하단 */
-#footer {
-  height: 100px;
-  background: #ed1c24;
-  text-align: center; line-height: 100px;
-  color: white; font-weight: bold;
-  margin-top : 10px;
+#footer{
+  width: 90%;
+  height: 80%;
+  text-align: center;
+  margin : 0 auto;
+  padding : 0 auto;
+  padding-top: 30px;
 }

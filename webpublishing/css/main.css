@@ -302,7 +302,8 @@ body{
   width: 90%;
   height: 80%;
   text-align: center;
-  padding-left: 200px;
+  margin : 0 auto;
+  padding : 0 auto;
   padding-top: 30px;
 }
 .recentPost{
