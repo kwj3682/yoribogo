@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/mainTest.css">
+   <link rel="stylesheet" href="css/search.css">
+   
+   <title>Document</title>
+   
+</head>
+<body>
+  <span id = "menubar">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="http://codepen.io/MilanMilosev/pen/EoLBjo"></script>
+        <script>
+            function openLeftMenu() {
+                document.getElementById('kby_left-menu').style.width = '50%';
+                document.getElementByClassName('kby_v-tab_content').style.marginLeft = '50%';
+              }
+              
+              function closeLeftMenu() {
+                document.getElementById('kby_left-menu').style.width = '0';
+                document.getElementById('main').style.marginLeft = '0';
+              }
+              function openRightMenu() {
+                document.getElementById('kby_right-menu').style.width = '50%';
+                document.getElementById('main').style.marginLeft = '50%';
+            }
+
+            function closeRightMenu() {
+                document.getElementById('kby_right-menu').style.width = '0';
+                document.getElementById('main').style.marginLeft = '0';
+            }
+            $(".kby_v-tab_content").hide();
+            $(".kby_v-tab_content:first").show();
+
+            $(".kby_v-tab_tab-head li").click(function () {
+
+                $(".kby_v-tab_content").hide();
+                var activeTab = $(this).attr("rel");
+                $("#" + activeTab).fadeIn();
+                $(".kby_v-tab_tab-head li").removeClass("kby_active");
+                $(this).addClass("kby_active");
+
+
+            });
+
+            document.addEventListener('DOMContentLoaded',
+                function (event) {
+                    $("#kby_slider-range").slider({
+                        range: true,
+                        min: 0,
+                        max: 2000,
+                        values: [350, 500],
+                        step: 50,
+                        slide: function (event, ui) {
+                            var max = $("#kby_slider-range").slider('option', 'max');
+                            $("#kby_amount").val(ui.values[0] + "Kcal" + " - " + ui.values[1] + "Kcal");
+                            if (ui.values[1] == max) $('#kby_amount').val($('#kby_amount').val() + '+');
+                        }
+                    });
+                    $("#kby_amount").val($("#kby_slider-range").slider("values", 0) + "Kcal" + " - " + $("#kby_slider-range").slider("values", 1) + "Kcal");
+                    $(".kby_ui-widget-header").append($("input#kby_amount, .triangle"));
+                })
+            copyright('');
+           
+        </script>
+        <div class="kby_wrapper">
+          <a id = "logo" href = "main.html"><img src="images/logo-horizontal-300px.png"/></a>
+    
+            <div class="kby_navbar">
+                <span class="kby_open-slide">
+                    <a href="#" onclick="openLeftMenu()">
+                        <div>상세검색</div>
+                    </a>
+                </span>
+            </div>
+        <form>
+            <div id="kby_left-menu" class="kby_side-nav">
+                <div class="kby_side">
+                    <a href="#" class="kby_btn-close" onclick="closeLeftMenu()">&times;</a>
+                    <ul class="kby_v-tab_tab-head">
+                        <li class="kby_active" rel="kby_vtab0">상세검색</li>
+                        <li rel="kby_vtab1">종류</li>
+                        <li rel="kby_vtab3">난이도</li>
+                        <li rel="kby_vtab5">날씨</li>
+                        <li rel="kby_vtab6">양식</li>
+                        <li rel="kby_vtab7">열량</li>
+                        <li rel="kby_vtab8">조리시간</li>
+                        <li rel="kby_vtab9">주의</li>
+                    </ul>
+                </div>
+
+                <div class="kby_v-tab_container">
+                    <div id="kby_vtab0" class="kby_v-tab_content">
+
+                    </div>
+                    <div id="kby_vtab1" class="kby_v-tab_content">
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>국/탕/찌개</label>
+                        <br>
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>반찬</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>스프</label>
+                        <br>
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>샐러드</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>음료</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>면</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>만두</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>밥</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>빵/디저트</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>기타</label>
+
+                    </div>
+                    <!-- #tab1 -->
+
+
+                    <!-- #tab2 -->
+
+                    <div id="kby_vtab3" class="kby_v-tab_content">
+                        <h2>난이도</h2>
+                        <br>
+                        <br>
+                        <input type="range" class="kby_range" value="1" step="1" min="1" max="5">
+                        <br>
+                        <ul class="kby_range-labels">
+                            <li class="kby_active selected"></li>
+                            <li>매우 쉬움</li>
+                            <li>쉬움</li>
+                            <li>보통</li>
+                            <li>어려움</li>
+                            <li>매우 어려움</li>
+
+                        </ul>
+                    </div>
+                    <!-- #tab3 -->
+
+
+                    <div id="kby_vtab5" class="kby_v-tab_content">
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>맑은 날</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>비 오는 날</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>흐린 날</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>눈 오는 날</label>
+                        <br>
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>추운 날</label>
+                        <br>
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>더운 날</label>
+                    </div>
+                    <div id="kby_vtab6" class="kby_v-tab_content">
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>한식</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>일식</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>중식</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>서양식</label>
+                        <br>
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>동남 아시아 음식</label>
+                        <br>
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>기타</label>
+                    </div>
+                    <div id="kby_vtab7" class="kby_v-tab_content">
+                        <div class="kby_col6 slider">
+                            <p>
+
+                                <input type="text" id="kby_amount" readonly>
+                            </p>
+                            <div id="kby_slider-range"></div>
+                        </div>
+                    </div>
+                    <div id="kby_vtab8" class="kby_v-tab_content">
+
+                    </div>
+                    <div id="kby_vtab9" class="kby_v-tab_content">
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>고열량</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>고당(당뇨환자)</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>채식주의자</label>
+                        <br>
+                        <input type="checkbox" id="kby_c2" name="cc" />
+                        <label for="kby_c2"><span></span>할랄푸드</label>
+                        <br>
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>임산부</label>
+                        <br>
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>고염</label>
+                        <br>
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>고지방</label>
+                        <br>
+                        <input type="checkbox" id="kby_c1" name="cc" />
+                        <label for="kby_c1"><span></span>영유아</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="kby_search">
+            <div class="kby_search">
+                <form action="" method="">
+                    <input type="search" placeholder="오늘 뭐 먹지?">
+                    <button>검색</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="kby_navbar">
+            <span class="kby_open-slide">
+                <a href="#" onclick="openRightMenu()">
+                    <div>
+                        재료검색
+                    </div>
+                </a>
+            </span>
+        </div>
+        <form>
+            <div id="kby_right-menu" class="kby_right-nav">
+                <a href="#" class="kby_btn-close" onclick="closeRightMenu()">&times;</a>
+
+            </div>
+        </form>
+      </div>
+                
+                <a id = "loginButton" href="mypage.html">kwj1234<img id="loginSuccess" src="images/짱구.jpg"/></a> 
+    </span>
+    
+  <span id = "up"><a href= "#main1"><i class="fas fa-angle-double-up fa-4x"></i></a></span>
+  
+  <div>
+      <div id = "main1">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                   <ol class="carousel-indicators">
+                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                   </ol>
+                   <div class="carousel-inner">
+                     <div class="carousel-item active">
+                       <img class="d-block w-100" src="https://www.sbs.com.au/food/sites/sbs.com.au.food/files/IMG_1105.jpg
+                       " alt="첫번째 슬라이드">
+                       <div class="carousel-caption d-none d-md-block">
+                          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ad mollitia impedit ut ab facilis soluta quidem labore dolore fugit!</h1>
+                          <p>- Augustinus -</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="http://premiermeatcompany.com/wp-content/uploads/2015/10/WebRes_Chicken_05-1.jpg" alt="두번째 슬라이드">
+                             <div class="carousel-caption d-none d-md-block">
+                                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi exercitationem quibusdam quisquam. Atque, odio illo qui soluta assumenda quae obcaecati?
+                                </h1>
+                                <p>- Johann Wolfgang von Goethe -</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="https://www.seriouseats.com/recipes/images/2015/02/20150218-gigantes-bean-salad-2.jpg" alt="세번째 슬라이드">
+                                   <div class="carousel-caption d-none d-md-block">
+                                      <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, illum. Unde quasi vero assumenda accusamus sed distinctio eaque exercitationem ut.</h1>
+                                      <p>- Hans Christian Andersen -</p>
+                                  </div>
+                     </div>
+                   </div>
+                   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="sr-only">이전</span>
+                   </a>
+                   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="sr-only">다음</span>
+                   </a>
+         </div>           
+ 
+      </div>
+
+
+      <div id = "main2">
+        
+        <h3 id="main2Title">최근 게시물</h3>
+
+          <p>최근에 등록된 레시피를 찾아보세요.</p>
+          <hr>
+          <div class="recentPost">
+              <div class="recentPost_body">
+                  <div class="profileBlock_body_inner"  onclick="location.href='detail.html';" style="background-image: url(images/foodthumbnail1.jpg); background-size: cover;">
+                    <div  class="innerWrapper">  
+                    <img id = "profileBlock_body_inner_profile" src="images/profile19.jpg"/>  
+                     <div class="innerWrapper_inner">
+                       <div>방금</div>
+                       <div>kwj1234</div>
+                       <div><i class="fas fa-star"></i>3.1/5</div>
+                      </div>
+                      <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                    </div>
+                  </div>
+                  <div class="profileBlock_body_inner"  onclick="location.href='detail.html';"  style="background-image: url(images/foodthumbnail2.jpg); background-size: cover;">
+                    <div  class="innerWrapper">  
+                    <img id = "profileBlock_body_inner_profile" src="images/profile20.jpg"/>  
+                     <div class="innerWrapper_inner">
+                       <div>방금</div>
+                       <div>kwj1234</div>
+                       <div><i class="fas fa-star"></i>3.1/5</div>
+                      </div>
+                      <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                    </div>
+                  </div>
+                  <div class="profileBlock_body_inner"  onclick="location.href='detail.html';" style="background-image: url(images/foodthumbnail3.jpg); background-size: cover;">
+                    <div  class="innerWrapper">  
+                    <img id = "profileBlock_body_inner_profile" src="images/profile17.JPG"/>  
+                     <div class="innerWrapper_inner">
+                       <div>방금</div>
+                       <div>kwj1234</div>
+                       <div><i class="fas fa-star"></i>3.1/5</div>
+                      </div>
+                      <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                    </div>
+                  </div>
+  
+                  
+                </div>
+              </div>
+            </div>
+            
+      <div id = "main3">
+        <h2 style="border-top: 1px solid gainsboro; margin-top: 95px; padding-top: 30px;">"회원님에게 추천"</h2>
+        
+        <div id = "main3_pic">
+          <span class = "main3_pic">
+            <img src = "images/food5.jpg"/>
+              <p>
+                  <a>Lorem ipsum dolor sit.</a>
+                <br>
+                <br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus doloribus temporibus consectetur nemo voluptatum quam?
+              </p>
+          </span>
+          <span class = "main3_pic">
+            <img src = "images/food1.jpg"/>
+                <p>
+                  <a>Molestiae, magni
+                  </a>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus magnam earum dolore id quisquam iusto?
+                </p>
+            </span>
+            <span class = "main3_pic">
+              <img src = "images/food2.jpg"/>
+                  <p>
+                      <a>rem provident incidunt.
+                         </a>
+                        <br>  
+                        <br>  
+                        <br>  
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi illo, corrupti fugiat doloribus odio sunt!
+                        </p>
+                
+              </span>
+              <span class = "main3_pic">
+                <img src = "images/food4.jpg"/>
+                  <p>
+                    <a>Lorem ipsum dolor sit amet.</a>  
+                    <br>
+                    <br>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, eum.
+                    </p>
+
+            </span>
+          </div>
+          <img src = "images/logo-horizontal-300px.png" width="300px"/>
+      </div>
+      
+
+
+
+      <div id = "main4"> 
+        <h3 id= "main4Title">오늘 같은 날씨엔,</h3>
+        <div class="whetherRecommendation">
+            <div class="whetherRecommendation_body">
+                <div class="profileBlock_body_inner"  onclick="location.href='detail.html';"  style="background-image: url(images/foodthumbnail4.jpg); background-size: cover;">
+                    <div  class="innerWrapper">  
+                    <img id = "profileBlock_body_inner_profile" src="images/짱구.jpg"/>  
+                     <div class="innerWrapper_inner">
+                       <div>방금</div>
+                       <div>kwj1234</div>
+                       <div><i class="fas fa-star"></i>3.1/5</div>
+                      </div>
+                      <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                    </div>
+                  </div>
+                  <div class="profileBlock_body_inner"  onclick="location.href='detail.html';" style="background-image: url(images/foodthumbnail5.jpg); background-size: cover;">
+                      <div  class="innerWrapper">  
+                        <i class="fas fa-user-circle fa-5x"></i>
+                        <div class="innerWrapper_inner">
+                          <div>방금</div>
+                          <div>kwj1234</div>
+                          <div><i class="fas fa-star"></i>3.1/5</div>
+                        </div>
+                        <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                      </div>
+                    </div>
+                    <div class="profileBlock_body_inner"  onclick="location.href='detail.html';" style="background-image: url(images/foodthumbnail6.jpg); background-size: cover;">
+                        <div  class="innerWrapper">  
+                          <img id = "profileBlock_body_inner_profile" src="images/profile1.jpg"/>  
+                          <div class="innerWrapper_inner">
+                         <div>방금</div>
+                         <div>kwj1234</div>
+                         <div><i class="fas fa-star"></i>3.1/5</div>
+                        </div>
+                        <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                      </div>
+                    </div>
+                    <div class="profileBlock_body_inner"  onclick="location.href='detail.html';"  style="background-image: url(images/foodthumbnail7.jpg); background-size: cover;">
+                        <div  class="innerWrapper">  
+                        <img id = "profileBlock_body_inner_profile" src="images/profile2.jpg"/>  
+                         <div class="innerWrapper_inner">
+                           <div>방금</div>
+                           <div>kwj1234</div>
+                           <div><i class="fas fa-star"></i>3.1/5</div>
+                          </div>
+                          <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                        </div>
+                      </div>
+                    <div class="profileBlock_body_inner"  onclick="location.href='detail.html';" style="background-image: url(images/foodthumbnail8.jpg); background-size: cover;">
+                        <div  class="innerWrapper">  
+                        <img id = "profileBlock_body_inner_profile" src="images/profile3.jpg"/>  
+                         <div class="innerWrapper_inner">
+                           <div>방금</div>
+                           <div>kwj1234</div>
+                           <div><i class="fas fa-star"></i>3.1/5</div>
+                          </div>
+                          <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                        </div>
+                      </div>
+                    <div class="profileBlock_body_inner"  onclick="location.href='detail.html';"  style="background-image: url(images/foodthumbnail9.jpg); background-size: cover;">
+                        <div  class="innerWrapper">  
+                        <img id = "profileBlock_body_inner_profile" src="images/profile4.jpg"/>  
+                         <div class="innerWrapper_inner">
+                           <div>방금</div>
+                           <div>kwj1234</div>
+                           <div><i class="fas fa-star"></i>3.1/5</div>
+                          </div>
+                          <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                        </div>
+                      </div>
+                    <div class="profileBlock_body_inner"  onclick="location.href='detail.html';"  style="background-image: url(images/foodthumbnail10.jpg); background-size: cover;">
+                        <div  class="innerWrapper">  
+                        <img id = "profileBlock_body_inner_profile" src="images/profile5.JPG"/>  
+                         <div class="innerWrapper_inner">
+                           <div>방금</div>
+                           <div>kwj1234</div>
+                           <div><i class="fas fa-star"></i>3.1/5</div>
+                          </div>
+                          <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                        </div>
+                      </div>
+                    <div class="profileBlock_body_inner"  onclick="location.href='detail.html';" style="background-image: url(images/foodthumbnail11.jpg); background-size: cover;">
+                        <div  class="innerWrapper">  
+                        <img id = "profileBlock_body_inner_profile" src="images/profile6.jpg"/>  
+                         <div class="innerWrapper_inner">
+                           <div>방금</div>
+                           <div>kwj1234</div>
+                           <div><i class="fas fa-star"></i>3.1/5</div>
+                          </div>
+                          <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                        </div>
+                      </div>
+                    <div class="profileBlock_body_inner"  onclick="location.href='detail.html';" style="background-image: url(images/foodthumbnail12.jpg); background-size: cover;">
+                        <div  class="innerWrapper">  
+                        <img id = "profileBlock_body_inner_profile" src="images/profile7.jpg"/>  
+                         <div class="innerWrapper_inner">
+                           <div>방금</div>
+                           <div>kwj1234</div>
+                           <div><i class="fas fa-star"></i>3.1/5</div>
+                          </div>
+                          <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit illum voluptates quibusdam quam veniam quia.</div>
+                        </div>
+                      </div>
+                    
+                    
+  
+                    
+                    
+                  </div>
+      </div>
+      </div>
+      
+      <div id="main5">
+        <h3 id="main5Title">이달의 추천왕</h3>
+        <div class="statistics_body">
+
+        <div></div>
+        <div id="statistics">
+            <div id="statistics_king">
+                <img id="king" src="images/짱구.jpg"></img>
+                <h2>kwj1234</h2>
+                <h2>축하드립니다!</h2>
+            </div>
+        </div>
+        <div></div>
+    </div>
+    </div>
+
+
+    </div>
+
+    <footer style="position: relative; width: 100%; background: gray; height: 300px; color:white;">
+    <div id="footer">
+        <img src = "images/logo-vertical-300px.png" style="width: 80px;"/>
+        <p>
+            YORIBOGO Receipes
+            <br>개인정보관리책임자: 김우중
+            <br>고객센터: 010-4955-6029(평일:13:30 ~ 14:30 토요일:12:00 ~ 12:01) FAX: 02-000-000 Email:xxxxx@yoribogo.com
+            <br>
+            <br>
+            copyright @ YORIBOGO Corp. All Right Reserved.
+          </p>
+    </div>  
+       
+    </footer>  
+
+</body>
+</html>
