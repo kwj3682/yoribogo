@@ -18,64 +18,7 @@
 </head>
 <body>
   <span id = "menubar">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="http://codepen.io/MilanMilosev/pen/EoLBjo"></script>
-        <script>
-            function openLeftMenu() {
-                document.getElementById('kby_left-menu').style.width = '50%';
-                document.getElementByClassName('kby_v-tab_content').style.marginLeft = '50%';
-              }
-              
-              function closeLeftMenu() {
-                document.getElementById('kby_left-menu').style.width = '0';
-                document.getElementById('main').style.marginLeft = '0';
-              }
-              function openRightMenu() {
-                document.getElementById('kby_right-menu').style.width = '50%';
-                document.getElementById('main').style.marginLeft = '50%';
-            }
-
-            function closeRightMenu() {
-                document.getElementById('kby_right-menu').style.width = '0';
-                document.getElementById('main').style.marginLeft = '0';
-            }
-            $(".kby_v-tab_content").hide();
-            $(".kby_v-tab_content:first").show();
-
-            $(".kby_v-tab_tab-head li").click(function () {
-
-                $(".kby_v-tab_content").hide();
-                var activeTab = $(this).attr("rel");
-                $("#" + activeTab).fadeIn();
-                $(".kby_v-tab_tab-head li").removeClass("kby_active");
-                $(this).addClass("kby_active");
-
-
-            });
-
-            document.addEventListener('DOMContentLoaded',
-                function (event) {
-                    $("#kby_slider-range").slider({
-                        range: true,
-                        min: 0,
-                        max: 2000,
-                        values: [350, 500],
-                        step: 50,
-                        slide: function (event, ui) {
-                            var max = $("#kby_slider-range").slider('option', 'max');
-                            $("#kby_amount").val(ui.values[0] + "Kcal" + " - " + ui.values[1] + "Kcal");
-                            if (ui.values[1] == max) $('#kby_amount').val($('#kby_amount').val() + '+');
-                        }
-                    });
-                    $("#kby_amount").val($("#kby_slider-range").slider("values", 0) + "Kcal" + " - " + $("#kby_slider-range").slider("values", 1) + "Kcal");
-                    $(".kby_ui-widget-header").append($("input#kby_amount, .triangle"));
-                })
-            copyright('');
-           
-        </script>
+     
         <div class="kby_wrapper">
           <a id = "logo" href = "main.html"><img src="images/logo-horizontal-300px.png"/></a>
     
@@ -268,6 +211,65 @@
                 
                 <a id = "loginButton" href="mypage.html">kwj1234<img id="loginSuccess" src="images/짱구.jpg"/></a> 
     </span>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="http://codepen.io/MilanMilosev/pen/EoLBjo"></script>
+    <script>
+        function openLeftMenu() {
+            document.getElementById('kby_left-menu').style.width = '50%';
+            document.getElementByClassName('kby_v-tab_content').style.marginLeft = '50%';
+          }
+          
+          function closeLeftMenu() {
+            document.getElementById('kby_left-menu').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+          }
+          function openRightMenu() {
+            document.getElementById('kby_right-menu').style.width = '50%';
+            document.getElementById('main').style.marginLeft = '50%';
+        }
+
+        function closeRightMenu() {
+            document.getElementById('kby_right-menu').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+        }
+        $(".kby_v-tab_content").hide();
+        $(".kby_v-tab_content:first").show();
+
+        $(".kby_v-tab_tab-head li").click(function () {
+
+            $(".kby_v-tab_content").hide();
+            var activeTab = $(this).attr("rel");
+            $("#" + activeTab).fadeIn();
+            $(".kby_v-tab_tab-head li").removeClass("kby_active");
+            $(this).addClass("kby_active");
+
+
+        });
+
+        document.addEventListener('DOMContentLoaded',
+            function (event) {
+                $("#kby_slider-range").slider({
+                    range: true,
+                    min: 0,
+                    max: 2000,
+                    values: [350, 500],
+                    step: 50,
+                    slide: function (event, ui) {
+                        var max = $("#kby_slider-range").slider('option', 'max');
+                        $("#kby_amount").val(ui.values[0] + "Kcal" + " - " + ui.values[1] + "Kcal");
+                        if (ui.values[1] == max) $('#kby_amount').val($('#kby_amount').val() + '+');
+                    }
+                });
+                $("#kby_amount").val($("#kby_slider-range").slider("values", 0) + "Kcal" + " - " + $("#kby_slider-range").slider("values", 1) + "Kcal");
+                $(".kby_ui-widget-header").append($("input#kby_amount, .triangle"));
+            })
+        copyright('');
+       
+    </script>
     
   <span id = "up"><a href= "#main1"><i class="fas fa-angle-double-up fa-4x"></i></a></span>
   
