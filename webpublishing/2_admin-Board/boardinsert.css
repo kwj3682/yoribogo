@@ -28,7 +28,6 @@ body {
     background-color: white;
 }
 
-
 #header {
 width:1200px;
  color: #333;
@@ -38,7 +37,7 @@ width:1200px;
  margin: 20px 0px 0px 0px;
  background-color : white;
  text-align: center;
- background-image: url('../이미지/salad-2068220_1920.jpg');
+ background-image: url('images/salad-2068220_1920.jpg');
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -213,12 +212,8 @@ width:1200px;
       font-size: 90%;
   }
 
-
-  fieldset {
-    border: 0;
-    padding: 0;
-  }
   
+
   input[type=text],
   textarea {
     width: 100%;
@@ -226,6 +221,7 @@ width:1200px;
     border-left: 1px solid #ccc;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
+    
   }
 
   input[type=text] {
@@ -280,6 +276,12 @@ width:1200px;
     }
   }
 
+  textarea::placeholder {
+    color: tomato;
+    margin : 0 auto;
+    font-size: 15px;
+    font-family:"Nanum Gothic", sans-serif;
+  }
 
 
 
