@@ -38,8 +38,7 @@ width:1200px;
  margin: 20px 0px 0px 0px;
  background-color : white;
  text-align: center;
- images/logo-vertical-1000px"
- background-image: url('images/salad-2068220_1920.jpg');
+ background-image: url('../images/salad-2068220_1920.jpg');
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
