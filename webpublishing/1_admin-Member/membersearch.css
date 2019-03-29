@@ -38,7 +38,7 @@ width:1200px;
  margin: 20px 0px 0px 0px;
  background-color : white;
  text-align: center;
- background-image: url('../이미지/salad-2068220_1920.jpg');
+ background-image: url('../images/salad-2068220_1920.jpg');
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -175,11 +175,6 @@ width:1200px;
  
  }
  
- 
-#page > div > a {
-    text-decoration: none;
-    line-height: 30px;
-}
 
 
 .before {
@@ -224,6 +219,10 @@ width:1200px;
     background-color: rgb(247, 19, 19);
 }
 
+#page > div > a {
+    text-decoration: none;
+    line-height: 30px;
+}
 
 #contentWrapper{
     display: grid;

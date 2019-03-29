@@ -2,11 +2,17 @@
   padding: 0;
   margin: 3px;
   border: 0;
+  box-sizing: border-box;
+  font-family: 'Muli', sans-serif;
+}
+body{
+  background: gainsboro;
 }
 .all {
-  margin: auto;
-  width: 60em;
-  min-width: 800px;
+  margin: 0 auto;
+  width: 60em; min-width: 800px;
+  box-sizing: border-box;
+  background: white;
 }
 #line{
   height: 3px;
@@ -62,6 +68,9 @@
 #up>a>i:hover{
   color : red;
 }
+.top{
+  height: 80px;
+}
 
 /* ========================상단========================== */
 /* 요리 제목, 사진, 아이디 정보 */
@@ -100,7 +109,6 @@
 .id > a{
   text-decoration: none;
 }
-
 #top-wrapper > .top-right > a > img {
   position: relative;
   top: -3px;
@@ -111,6 +119,7 @@
   box-sizing: border-box;
   padding: 10px;
 }
+
 
 /* 좋아요 */
 #likebar {
@@ -304,23 +313,14 @@
 #referImg-wrpper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 232px;
+  height: 250px;
   margin-bottom : 50px;
 }
+/* 
 #referImg-wrpper > .referImg {
   box-sizing: border-box;
   overflow: hidden;
 }
-
-/* #referImg-wrpper > .referImg > img {
-  position: relative;
-  top: -3px;
-  left: -3px;
-  width: 232.5px;
-  height: 226px;
-  overflow: hidden;
-  box-sizing: border-box;
-} */
 #referImg-wrpper > .referImg > img {
   position: relative;
   top: -3px;
@@ -332,8 +332,8 @@
 }
 #referImg-wrpper > .referImg:hover {
   background: rgba(255, 255, 255, 0.5);
-  /* background: black;
-  opacity: 0.5;  */
+  background: black;
+  opacity: 0.5; 
 }
 #referImg-wrpper > .referImg > a {
   text-align: center;
@@ -349,7 +349,60 @@
   color: black;
   font-weight: bold;
   z-index: 1;
+} */
+/* ============================ 변경 ========================== */
+
+.recipe {
+  width: 225px; height: 230px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
+.recipe a {
+  color: #333;
+  text-decoration: none;
+}
+.image {
+  height: 230px;
+  margin-top : -25px; margin-left: -5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 1px 5px #555;
+}
+.recipe:hover .image img {
+  display: flex;
+  width: 120%; 
+  filter: opacity(0.3);
+}
+.image img {
+  height: 230px;
+  width: 100%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: .3s;
+  position: absolute;
+  filter: brightness(1);
+  z-index: 0;
+}
+.quality {
+  display: none;
+  text-align: center;
+  top : 30%;
+  position: absolute;
+  z-index: 0;
+  font-weight: bolder;
+}
+.recipe:hover .quality {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  color: black;
+}
+
+
+
+
 
 
 
@@ -358,7 +411,7 @@
   width: 90%;
   height: 80%;
   text-align: center;
-  margin : 0 auto;
+  margin : 0 auto; 
   padding : 0 auto;
   padding-top: 30px;
 }
