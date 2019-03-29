@@ -8,9 +8,65 @@
     width: 60em;
     min-width: 800px;
 }
+/* ========================메뉴바========================== */
+#loginButton{
+    position: absolute;
+    display: block;
+    top: 15px;
+    right: 50px;
+    color: tomato;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  #loginButton:hover{
+    text-decoration: none;
+  }
+  #loginButton:visited{
+    text-decoration: none;
+  }
+#menubar{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width:100%;
+    height: 70px;
+    background: azure;
+    opacity: 0.7;
+}
+#logo{
+    position: absolute;
+    left : 2%;
+    width:280px;
+    height: 100%;
+}
+#logo>img{
+    width:133px;
+}
+#up{
+    position: fixed;
+    width : 50px;
+    height : 75px;
+    bottom : 4%;
+    right: 1%;
+    z-index: 1;
+  }
+  #up>a>i{
+    transition:.4s;
+    color: tomato;
+  }
+  #up>a>i:hover{
+    color : red;
+  }
+
+/* ========================상단========================== */
+#insert{
+    background: tomato;
+    height: 50px;
+    text-align: center; line-height: 50px;
+    color: white; font-size: 20px;
+}
 #line{
     border-bottom: 1px solid black;
-    /* background: #f7943a; */
     height: 30px;
     line-height: 30px;
     font-weight: bold;
@@ -94,7 +150,7 @@ input[type="text"], select{
 #content-wrapper{
     display : grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    height: 1300px;
+    height: 700px;
     background: white;
     border : .5px solid lightgrey;
 }
@@ -105,7 +161,9 @@ input[type="text"], select{
     grid-template-columns: 2fr 4fr .5fr;
     height : 60px; line-height: 60px;
     /* max-height: auto; */
-    background: white; border : .5px solid grey;
+    background: white; 
+    border : .5px solid lightgrey;
+    box-shadow: 0.5px 0.5px 0.3px grey;
 }
 #refer-wrapper div > #search{
     width: 500px;
@@ -123,6 +181,7 @@ input[type="text"], select{
 /* 등록버튼 */
 #submit{
     margin-top: 10px;
+    margin-bottom : 30px;
 }
 #submit > button{
     margin-left : 355px;

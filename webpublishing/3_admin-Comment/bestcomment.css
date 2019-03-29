@@ -7,8 +7,9 @@ body {
 
 #wrapper { 
  margin: 0 auto;
- width:1200px;
- /* width: 922px; */
+ width:1220px;
+ background:  rgb(252, 246, 245);
+
 }
 
 #logo{
@@ -63,7 +64,17 @@ width:1200px;
 }
 
 
-#footer { 
+#footer {
+    width: 90%;
+    height: 80%;
+    text-align: center;
+    margin : 0 auto;
+    padding : 0 auto;
+    padding-top: 30px;
+ }
+
+ 
+#footeradmin { 
  width:1200px;
  height: 30px;
  clear: both;
@@ -141,7 +152,7 @@ width:1200px;
 
 
 #content { 
-    border: 1px solid white;
+    border: 1px solid  rgb(252, 246, 245);
     float: left;
     color: #333;
     margin: 5px 5px; 
@@ -149,7 +160,7 @@ width:1200px;
     min-height: 400px;
     display: flex;
     justify-content:center;
-    background-color: white;
+    background-color:  rgb(252, 246, 245);
    }
 
 
@@ -166,6 +177,50 @@ width:1200px;
     margin-bottom : 20px;
  
  }
+
+ 
+.before {
+    width: 40px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: tomato;
+    display: block;
+    transition: all 0.2s;
+    border-radius: 8px;
+    height: 30px;
+}
+
+.before:hover {
+    color: white;
+    background-color: rgb(247, 19, 19);
+}
+
+
+.before>a, .after>a {
+    color:white;
+}
+
+
+.after {
+    width: 40px;
+    float: left;
+    height: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: tomato;
+    display: block;
+    color: #333;
+    transition: all 0.2s;
+    border-radius: 8px;
+}
+
+
+
+.after:hover {
+    color: black;
+    background-color: rgb(247, 19, 19);
+}
+
  
  td:hover {
     background : rgb(248, 202, 186)
@@ -260,6 +315,12 @@ width:1200px;
     .container-4:hover button.icon:hover{
       background: white;
     }
+
+    
+#page > div > a {
+    text-decoration: none;
+}
+
 
 
     /* 검색 위치 */
