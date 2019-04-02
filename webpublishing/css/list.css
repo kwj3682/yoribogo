@@ -1,7 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
 body{
   background: gainsboro;
 }
@@ -9,7 +5,7 @@ body{
    margin: 0 auto;
    background: white;
   width: 1300px;
-   height: 16*00px;
+   height: 2000px;
    box-sizing: border-box;
  }
  li{
@@ -25,7 +21,6 @@ body{
    box-sizing: border-box;
    font-family: 'Muli', sans-serif;
  }
- 
  #up{
    position: fixed;
    width : 50px;
@@ -249,6 +244,7 @@ body{
 
 .btn > form > button {
   font-weight: bold;
+  cursor: pointer;
   color: tomato;
   width: 100px;
   height: 40px;
@@ -299,34 +295,7 @@ body{
   justify-content: center;
   align-items: center;
 }
-#footer{
-  width: 90%;
-  height: 80%;
-  text-align: center;
-  margin : 0 auto;
-  padding : 0 auto;
-  padding-top: 30px;
-}
 
-
-#menubar{
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  width:100%;
-  height: 70px;
-  background: azure;
-  opacity: 0.7;
-}
-#logo{
-  position: absolute;
-  left : 2%;
-  width:280px;
-  height: 100%;
-}
-#logo>img{
-    width:133px;
-}
 #loginButton{
   position: absolute;
   display: block;
@@ -342,34 +311,11 @@ body{
 #loginButton:visited{
   text-decoration: none;
 }
-
-.page {
-  width: 100%;
-}
-.page > ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style:none;
-}
-.page > ul li {
-  padding:4px;
-  width:40px;
-  height: 40px;
-}
-.page > ul li a {
-	padding:4px;
-  
-	color:#000;
-	font:bold 15px tahoma;
-	border:1px solid #eee;
-	text-align:center;
-  text-decoration:none;
-  border-radius: 10px;
-}
-.page > ul li a:hover, ul li a:focus {
-	color:#fff;
-  border:1px solid tomato;
-  border-radius: 10px;
-	background-color:tomato;
+#footer{
+  width: 90%;
+  height: 80%;
+  text-align: center;
+  margin : 0 auto;
+  padding : 0 auto;
+  padding-top: 30px;
 }
