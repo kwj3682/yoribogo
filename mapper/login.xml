@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<!-- 이 xml을 사용할 클래스 경로를 준다. 패키지명과 함께..   -->
+<mapper namespace="kr.co.mlec.login.dao.LoginMapper">
+
+	 <select id="selectLogin" parameterType="member" resultType="member" flushCache="true" useCache="false">
+		select *
+		  from tb_member
+		 where id = #{id}
+		   and pass = #{pass}
+	 </select>
+	
+</mapper>
