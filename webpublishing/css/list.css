@@ -5,7 +5,7 @@ body{
    margin: 0 auto;
    background: white;
   width: 1300px;
-   height: 2000px;
+   height: 1600px;
    box-sizing: border-box;
  }
  li{
@@ -318,4 +318,37 @@ body{
   margin : 0 auto;
   padding : 0 auto;
   padding-top: 30px;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.page > ul {
+	list-style:none;
+	display:inline;
+}
+.page > ul li {
+	float:left;
+}
+.page > ul li a {
+	float: left;
+	padding: 4px;
+	margin-right:5px;
+	width: 26px;
+	color: #000;
+	font: bold 13px tahoma;
+  border: 1px solid #eee;
+  border-radius: 15px;
+	text-align: center;
+  text-decoration: none;
+}
+
+.page > ul li a:hover, ul li a:focus {
+	color:#fff;
+	border:1px solid tomato;
+	background-color: tomato;
 }
